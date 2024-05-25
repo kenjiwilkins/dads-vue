@@ -1,14 +1,20 @@
 {
   "name": "dads-vue",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "files": [
-    "dist/**/*"
+    "dist/*"
   ],
-  "main": "dist/dads-vue.es.js",
-  "module": "dist/dads-vue.es.js",
-  "types": "dist/dads-vue.d.ts",
+  "main": "./dist/dads-vue.umd.js",
+  "module": "./dist/dads-vue.es.js",
+  "types": "./dist/dads-vue.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/dads-vue.es.js",
+      "require": "./dist/dads-vue.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
