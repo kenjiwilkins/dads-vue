@@ -1,12 +1,12 @@
 {
   "name": "dads-vue",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "files": [
-    "dist/*"
+    "dist/**/*"
   ],
-  "main": "dist/dads-vue.umd.js",
+  "main": "dist/dads-vue.es.js",
   "module": "dist/dads-vue.es.js",
   "types": "dist/dads-vue.d.ts",
   "scripts": {
