@@ -1,15 +1,31 @@
+import { resolve } from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: "dist",
     lib: {
-      entry: "src/main.ts",
+      entry: "src/components/index.ts",
       name: "DadsVue",
-      fileName: "dads-vue",
+      fileName: (format) => `dads-vue.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["vue", "*.stories.ts"],
+      output: {
+        globals: {
+          vue: "Vue",
+        },
+      },
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    cssInjectedByJsPlugin(),
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
 });
