@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      dads-styles:
+        specifier: ^1.0.10
+        version: 1.0.10
       vue:
         specifier: ^3.4.21
         version: 3.4.27(typescript@5.4.5)
@@ -39,9 +42,6 @@ importers:
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.0.4(vite@5.2.11(@types/node@20.12.12))(vue@3.4.27(typescript@5.4.5))
-      dads-styles:
-        specifier: github:kenjiwilkins/dads-styles
-        version: https://codeload.github.com/kenjiwilkins/dads-styles/tar.gz/bc9ae5992bad1a968ed29bb940cb25c451aa0c71
       storybook:
         specifier: ^8.1.2
         version: 8.1.2(@babel/preset-env@7.24.5(@babel/core@7.24.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1969,9 +1969,8 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  dads-styles@https://codeload.github.com/kenjiwilkins/dads-styles/tar.gz/bc9ae5992bad1a968ed29bb940cb25c451aa0c71:
-    resolution: {tarball: https://codeload.github.com/kenjiwilkins/dads-styles/tar.gz/bc9ae5992bad1a968ed29bb940cb25c451aa0c71}
-    version: 1.0.7
+  dads-styles@1.0.10:
+    resolution: {integrity: sha512-Upg3wdQ4E8uf+D3OyKdlgdGMi5S7O78Wgkbn7mgkeSaOwk+P85AFL0AkSCCqq0ECJK3F0u3eJa4zlJdGSn5J4g==}
 
   de-indent@1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}
@@ -3867,6 +3866,9 @@ packages:
 
   vue-component-type-helpers@2.0.19:
     resolution: {integrity: sha512-cN3f1aTxxKo4lzNeQAkVopswuImUrb5Iurll9Gaw5cqpnbTAxtEMM1mgi6ou4X79OCyqYv1U1mzBHJkzmiK82w==}
+
+  vue-component-type-helpers@2.0.21:
+    resolution: {integrity: sha512-3NaicyZ7N4B6cft4bfb7dOnPbE9CjLcx+6wZWAg5zwszfO4qXRh+U52dN5r5ZZfc6iMaxKCEcoH9CmxxoFZHLg==}
 
   vue-docgen-api@4.78.0:
     resolution: {integrity: sha512-RsZf+qzTttCCAN9v7AKmBykc2QWmO8csVk1c2aXeOktomSOu0NA7sgK4ObuRB5lpmtOvTnwuxssyYmxXxABr+A==}
@@ -5791,7 +5793,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.4.27(typescript@5.4.5)
-      vue-component-type-helpers: 2.0.19
+      vue-component-type-helpers: 2.0.21
     transitivePeerDependencies:
       - encoding
       - prettier
@@ -6442,7 +6444,7 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  dads-styles@https://codeload.github.com/kenjiwilkins/dads-styles/tar.gz/bc9ae5992bad1a968ed29bb940cb25c451aa0c71: {}
+  dads-styles@1.0.10: {}
 
   de-indent@1.0.2: {}
 
@@ -8378,6 +8380,8 @@ snapshots:
       typescript: 5.4.5
 
   vue-component-type-helpers@2.0.19: {}
+
+  vue-component-type-helpers@2.0.21: {}
 
   vue-docgen-api@4.78.0(vue@3.4.27(typescript@5.4.5)):
     dependencies:

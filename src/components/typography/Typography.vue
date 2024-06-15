@@ -39,6 +39,8 @@
   </p>
 </template>
 <script setup lang="ts">
+import "dads-styles/dist/dads-styles.css";
+import { computed } from "vue";
 interface TypographyProps {
   variant?:
     | "h1"
@@ -61,4 +63,30 @@ const props = withDefaults(defineProps<TypographyProps>(), {
   /** typography variants: "h1" | "h2" | "h3" | "h4" | "h5" | "body-l" | "body" | "body-m" | "label-l" | "label" | "label-m" | "caption-l" | "caption" | "caption-m" */
   variant: "body",
 });
+
+// computed
+const classes = computed(() => {
+  const defaultClasses = {
+    "dads-typography": true,
+  };
+  return {
+    "dads-h1": props.variant === "h1",
+    "dads-h2": props.variant === "h2",
+    "dads-h3": props.variant === "h3",
+    "dads-h4": props.variant === "h4",
+    "dads-h5": props.variant === "h5",
+    "dads-body": props.variant === "body-l" || props.variant === "body",
+    "dads-body-m": props.variant === "body-m",
+    "dads-label": props.variant === "label-l" || props.variant === "label",
+    "dads-label-m": props.variant === "label-m",
+    "dads-caption":
+      props.variant === "caption-l" || props.variant === "caption",
+    "dads-caption-m": props.variant === "caption-m",
+  };
+});
 </script>
+<style scoped>
+.dads-typography {
+  color: var(--dads-body);
+}
+</style>

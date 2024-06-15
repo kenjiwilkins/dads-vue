@@ -1,10 +1,10 @@
 {
   "name": "dads-vue",
-  "private": true,
-  "version": "1.0.3",
+  "private": false,
+  "version": "1.0.4",
   "type": "module",
   "files": [
-    "dist/*"
+    "dist"
   ],
   "main": "./dist/dads-vue.umd.js",
   "module": "./dist/dads-vue.es.js",
@@ -23,6 +23,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "dads-styles": "^1.0.10",
     "vue": "^3.4.21"
   },
   "devDependencies": {
@@ -35,7 +36,6 @@
     "@storybook/vue3": "^8.1.2",
     "@storybook/vue3-vite": "^8.1.2",
     "@vitejs/plugin-vue": "^5.0.4",
-    "dads-styles": "github:kenjiwilkins/dads-styles",
     "storybook": "^8.1.2",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
